@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday ❤️</title>
+  <meta name="description" content="A little birthday surprise made with love.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="boot-screen" class="boot-screen" aria-hidden="true">
+    <pre id="boot-text"></pre>
+    <div class="boot-bar"><div id="boot-fill" class="boot-fill"></div></div>
+    <p id="boot-percent" class="boot-percent">0%</p>
+    <small class="boot-skip">tap to skip</small>
+  </div>
+
+  <div id="confetti-container" aria-hidden="true"></div>
+
+  <header class="hero" id="home">
+    <div class="balloon balloon-1">🎈</div>
+    <div class="balloon balloon-2">🎈</div>
+    <div class="balloon balloon-3">🎈</div>
+
+    <div class="hero-content">
+      <p class="eyebrow">12 OCTOBER • A SPECIAL DAY</p>
+      <h1>Happy Birthday,<br><span>SAMEERA</span> ❤️</h1>
+      <p class="hero-text">A little birthday surprise made especially for you.</p>
+
+      <div id="countdown" class="countdown" aria-label="Birthday countdown">
+        <div><strong id="days">00</strong><small>Days</small></div>
+        <div><strong id="hours">00</strong><small>Hours</small></div>
+        <div><strong id="minutes">00</strong><small>Minutes</small></div>
+        <div><strong id="seconds">00</strong><small>Seconds</small></div>
+      </div>
+
+      <p id="today-message" class="today-message hidden">🎉 It's your birthday today! 🎉</p>
+
+      <button id="start-btn" class="primary-btn" onclick="startCelebration()">🎁 Start the Surprise</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section cake-section" id="cake">
+      <div class="section-heading">
+        <span>01</span>
+        <h2>Make a Birthday Wish 🎂</h2>
+        <p>Every birthday deserves a wish. Light the candles, then make yours.</p>      </div>
+
+      <div class="cake-area">
+        <div class="cake">
+          <div class="candles">
+            <button class="candle" onclick="blowCandle(this)">🕯️</button>
+            <button class="candle" onclick="blowCandle(this)">🕯️</button>
+            <button class="candle" onclick="blowCandle(this)">🕯️</button>
+            <button class="candle" onclick="blowCandle(this)">🕯️</button>
+            <button class="candle" onclick="blowCandle(this)">🕯️</button>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-body">HAPPY<br>BIRTHDAY</div>
+          <div class="plate"></div>
+        </div>
+        <p id="cake-message" class="cake-message">👆 Tap all 5 candles to make your wish 🎵</p>
+      </div>
+
+      <audio id="birthday-music" src="birthday.mp3" preload="auto"></audio>
+    </section>
+
+    <section class="section gifts-section" id="gifts">
+      <div class="section-heading">
+        <span>02</span>
+        <h2>Birthday Gifts 🎁</h2>
+        <p>Six little digital gifts. Open them in any order.</p>      </div>
+
+      <div class="gift-grid">
+        <button class="gift-card" onclick="openGift(1)">
+          <span>🎁</span><strong>Gift One</strong><small>A birthday wish</small>
+        </button>
+        <button class="gift-card" onclick="openGift(2)">
+          <span>🎁</span><strong>Gift Two</strong><small>A little compliment</small>
+        </button>
+        <button class="gift-card" onclick="openGift(3)">
+          <span>🎁</span><strong>Gift Three</strong><small>A memory</small>
+        </button>
+        <button class="gift-card" onclick="openGift(4)">
+          <span>🎁</span><strong>Gift Four</strong><small>A funny one</small>
+        </button>
+        <button class="gift-card" onclick="openGift(5)">
+          <span>🎁</span><strong>Gift Five</strong><small>A wish for your year</small>
+        </button>
+        <button class="gift-card special" onclick="openGift(6)">
+          <span>🎁</span><strong>Final Gift</strong><small>A message from me ❤️</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="section awards-section" id="awards">
+      <div class="section-heading">
+        <span>03</span>
+        <h2>Birthday Awards 🏆</h2>      </div>
+
+      <div class="awards-grid">
+        <article class="award">
+          <div>🏆</div>
+          <h3>Best Smile Award</h3>
+          <p>For making ordinary moments brighter.</p>
+        </article>
+        <article class="award">
+          <div>💻</div>
+          <h3>Developer Award</h3>
+          <p>For surviving bugs, builds and deployments.</p>
+        </article>
+        <article class="award">
+          <div>❤️</div>
+          <h3>Favorite Person Award</h3>
+          <p>There was never any competition for this one.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section release-section" id="release">
+      <div class="section-heading">
+        <span>04</span>
+        <h2>Birthday Release 🚀</h2>      </div>
+
+      <div class="terminal">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>birthday-release</span></div>
+        <pre><code>$ npm run birthday
+
+Initializing birthday...
+
+✓ Memories loaded
+✓ Love initialized
+✓ Birthday wishes prepared
+✓ New adventures unlocked
+✓ One amazing birthday boy detected
+
+BIRTHDAY RELEASE: SUCCESSFUL 🎉
+
+Version: 30.0
+Release date: 12 October
+
+System notes:
+- Communication: REQUIRED 💬
+- Love & respect: CORE DEPENDENCIES ❤️
+- Problem-solving: TEAM MODE 🤝
+- Happiness: INCREASING 📈
+- Future together: UNLIMITED 🚀
+
+Status: READY FOR THE NEXT CHAPTER ❤️</code></pre>
+      </div>
+    </section>
+
+    <section class="section photos-section" id="memories">
+      <div class="section-heading">
+        <span>05</span>
+        <h2>Birthday Memories 📸</h2>      </div>
+
+      <div class="photo-grid">
+        <figure><img src="photo1.jpg" alt="Our first day in Colombo"><figcaption>Our first little adventure in Colombo ❤️</figcaption></figure>
+        <figure><img src="photo2.jpg" alt="My favorite person"><figcaption>My favorite person, always ❤️</figcaption></figure>
+        <figure><img src="photo3.jpg" alt="Still smiling because of you"><figcaption>Still smiling because of you ❤️</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section letter-section" id="letter">
+      <div class="section-heading">
+        <span>06</span>
+        <h2>One Last Gift 💌</h2>      </div>
+
+      <button id="letter-btn" class="letter-button" onclick="toggleLetter()">💌 Open Your Birthday Letter</button>
+
+      <div id="letter-content" class="letter hidden">
+        <p>My Dearest <strong>Pancha ayye</strong>,</p>
+        <p>
+          Happy Birthday! 🎂❤️
+        </p>
+        <p>
+          Sometimes I think about how our story started. We were just two people meeting for the first time, and little by little, through our conversations and all the small moments we shared, we became closer. I never knew exactly where that first meeting would take us, but I’m really happy that it brought me to you. ❤️
+        </p>
+        <p>
+          Since we’ve been together, I’ve learned that a relationship isn’t only about happy moments, beautiful words, or always agreeing with each other. We are two different people, with different thoughts, feelings, experiences, and ways of seeing things. So I know there will be times when we don’t understand each other, when our opinions don’t match, or when things don’t go exactly the way we hoped.
+        </p>
+        <p>
+          And I think that’s okay.
+        </p>
+        <p>
+          What matters to me is how we choose to handle those moments. I want us to always remember to respect each other, listen to each other, talk things through, and try to understand each other instead of trying to prove who is right. ❤️
+        </p>
+        <p>
+          I know that building a life together means facing many different situations - some easy, some difficult, some completely unexpected. We won’t always be able to control what happens, and we won’t always feel the same way about everything. But I hope we can always use both our hearts and our minds to make the right decisions for us.
+        </p>
+        <p>
+          I don’t expect us to be a perfect couple. I just hope we can be a couple who keeps choosing to understand, respect, support, and grow together. And when problems come, I hope we face them as <b>“us against the problem,”</b> not against each other.
+        </p>
+        <p>
+          I’m grateful for all the happiness you’ve already brought into my life, for all the little things you do, and for the person you are. ❤️ And I’m even more excited about the things we haven’t experienced yet - the places we’ll go, the things we’ll achieve, the silly moments we’ll laugh about, and all the memories we’ll create together.
+        </p>
+        <p>
+          For your birthday, I wish you happiness, good health, success, peace, and the strength to achieve everything you dream about. And for us, I wish for a beautiful life together - not a perfect one, but one filled with love, respect, understanding, laughter, patience, and a lot of beautiful memories. ❤️
+        </p>
+        <p>
+          Whatever life brings us, I hope we keep learning, growing, and becoming better for each other.
+        </p>
+        <p>
+          <b>Happy Birthday, my love.</b> 🎂❤️
+        </p>
+        <p>
+          I’m really happy that our story is only at the beginning.
+        </p>
+        <p>
+          <b>Here’s to you, to me, to us, and to everything still waiting for us. ❤️</b>
+        </p>
+        <p class="signature">With all my love,<br>Panchi ❤️</p>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video">
+      <div class="section-heading">
+        <span>07</span>
+        <h2>One More Surprise 🎬</h2>
+        <p>I made something special for you. Turn the sound on.</p>      </div>
+
+      <button class="letter-button" onclick="openVideo()">🎬 Watch Your Birthday Video</button>
+
+      <div id="video-content" class="video-frame hidden"></div>
+    </section>
+
+    <section class="final-section" id="final">
+      <div class="fireworks">🎆 ✨ 🎆</div>
+      <p class="eyebrow">THE FINAL CELEBRATION</p>
+      <h2>Happy Birthday,<br>Sameera! 🎂</h2>
+      <p>
+        Here's to another year of your story,<br>
+        another year of dreams, adventures and happiness.
+      </p>
+      <button class="primary-btn" onclick="celebrateAgain()">🎉 Celebrate Again</button>
+      <p class="made-with">Made with ❤️ by Imesha</p>    </section>
+  </main>
+
+  <div id="gift-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="close-btn" onclick="closeGift()" aria-label="Close">×</button>
+      <div id="gift-icon" class="modal-icon">🎁</div>
+      <h2 id="gift-title">Your Gift</h2>
+      <p id="gift-text"></p>
+      <button class="primary-btn" onclick="closeGift()">❤️ Keep It</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
